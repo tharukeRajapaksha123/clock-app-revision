@@ -18,8 +18,10 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar:
-            AppBar(backgroundColor: Colors.red, centerTitle: true, actions: [
+        appBar: AppBar(
+          backgroundColor: Colors.red,
+          centerTitle:
+              true, /* actions: [
           TextButton(
               child: Text("See alarms",
                   style: TextStyle(
@@ -28,7 +30,8 @@ class _HomePageState extends State<HomePage> {
               onPressed: () {
                 Get.to(() => AlarmPage());
               })
-        ]),
+        ]*/
+        ),
         body: Container(
             child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -188,14 +191,7 @@ class _HomePageState extends State<HomePage> {
                           days,
                         );
                         print("---- name is    ${name.text}");
-                        onSaveAlarm(
-                          int.parse(_time.split(":")[0]),
-                          int.parse(_time.split(":")[1]),
-                          name.text,
-                          "String alarmDescription",
-                          true,
-                          DateTime.now(),
-                        );
+
                         //Get.to(() => AlarmPage());
                       } else {
                         Get.dialog(AlertDialog(
