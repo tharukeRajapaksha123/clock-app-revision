@@ -109,6 +109,8 @@ class NotificationPlugin {
       var iOSPlatformChannelSpecifics = IOSNotificationDetails(
         sound: "a_long_cold_sting",
         presentSound: true,
+        presentAlert: true,
+        presentBadge: true,
       );
       var platformChannelSpecifics = NotificationDetails(
           androidPlatformChannelSpecifics, iOSPlatformChannelSpecifics);
